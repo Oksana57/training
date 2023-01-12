@@ -1,0 +1,15 @@
+## создание рандомного списка и его пузырьковая сориторовка 
+
+from random import randint
+alist=[]
+for i in range(6):
+    alist.append(randint(1,20))
+# alist=[3,64,4,1,6]
+print(alist)
+n=len(alist)
+for i in range(0,n-1):
+    for j in range(0,n-1):
+        if alist[j]>alist[j+1]:
+           
+            alist[j],alist[j+1]=alist[j+1],alist[j]
+print(alist)
