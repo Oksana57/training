@@ -9,18 +9,18 @@ def print_board(board):
 d=print_board(board)
 
 def play_x_0(play_char):
-    flag=Falsh
-    while not flag:
+    valid=Falsh
+    while not valid:
         player_aswer=input('В какую клетку поставим  '+ play_char+'?')
         try:
             player_aswer=int(player_aswer)
         except:
             print('Вы ввели не число, попробуте еще раз')
             continue
-        if 1>=player_aswer<=9:
-            if board[player_aswer-1] is not 'X0':
-               board[player_aswer-1]=play_char
-        flag=True
+        if 1<=player_aswer<=9:
+            if (str(board[player_aswer-1]) is not 'X0'):
+                board[player_aswer-1]=play_char
+                valid=True
             else:
                 print('Эта клетка занята')
         else:
@@ -29,8 +29,9 @@ def play_x_0(play_char):
 def victory(board):
     win_cod = ((0,1,2), (3,4,5),(6,7,8),(0,3,6),(1,4,7),(2,5,8),(0,4,8),(2,4,6))
     for each in win_cod:
-        if board((each[0])==board((each[1])==board((each[2]):
-           return board(each[0]) 
+        if board[[each[0]]==board[[each[1]]==board[[each[2]]:
+            return board[each[0]]
+            
     return Falsh
         
 def game(board):
@@ -55,4 +56,4 @@ def game(board):
         break
     
     print_board(board)    
-game(board)                                                       
+game(board)     
