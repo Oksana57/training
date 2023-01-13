@@ -1,6 +1,6 @@
 from random import randint
 
-n=201
+n=2021
 Flag=0
 while n>0:
     a=int(input('Игрок 1 введите число конфет от 1 до 28 включительно'))
